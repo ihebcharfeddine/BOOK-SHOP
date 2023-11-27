@@ -63,6 +63,9 @@
       992: {
         items: 4,
       },
+      1200: {
+        items: 5, // Add this section for 1200px and above screens
+      },
     },
   });
 })(jQuery);
