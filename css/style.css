@@ -184,6 +184,15 @@
 .page-header .breadcrumb-item + .breadcrumb-item::before {
   color: #999999;
 }
+/***features***/
+#feature_box{
+  margin-top: 120px;
+}
+
+#add_to_chart_btn a {
+  white-space: nowrap;
+}
+
 
 /*** Causes ***/
 .causes-item .progress {
