@@ -185,14 +185,13 @@
   color: #999999;
 }
 /***features***/
-#feature_box{
+#feature_box {
   margin-top: 120px;
 }
 
 #add_to_chart_btn a {
   white-space: nowrap;
 }
-
 
 /*** Causes ***/
 .causes-item .progress {
@@ -595,4 +594,67 @@
 .clients .swiper-slide img:hover {
   filter: none;
   opacity: 1;
+}
+
+/* =============== ADMIN ================= */
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 0 2px var(--dark);
+}
+
+/* sidebar */
+.sidebar {
+  background-color: var(--light);
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 80px 20px;
+  z-index: 100;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px var(--dark);
+  transition: all 0.5s ease;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_items {
+  padding: 0;
+  list-style: none;
+}
+
+#sidebarOpen {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #sidebarOpen {
+    font-size: 25px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--grey-color);
+  }
+  .sidebar.close {
+    left: -100%;
+  }
+  .search_bar {
+    display: none;
+  }
+  .sidebar.close .bottom_content {
+    left: -100%;
+  }
 }
