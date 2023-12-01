@@ -40,20 +40,14 @@
   </head>
 
   <body>
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Admin Dashboard</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Managments</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Manage Users</li>
-                </ol>
-            </nav>
-        </div>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
     </div>
-    <!-- Page Header End -->
+    <!-- Spinner End -->
 
     <!-- Navbar Start -->
     <div
@@ -137,36 +131,6 @@
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a
-                    class="dropdown-item d-flex align-items-center"
-                    href="./admin_products.html"
-                  >
-                    <i class="bi bi-edit"></i>
-                    <span>Manage Products</span>
-                  </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item d-flex align-items-center"
-                    href="./admin_users.html"
-                  >
-                    <i class="bi bi-edit"></i>
-                    <span>Manage Users</span>
-                  </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item d-flex align-items-center"
-                    href="users-profile.html"
-                  >
-                    <i class="bi bi-edit"></i>
-                    <span>category</span>
-                  </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
                   <a class="dropdown-item d-flex align-items-center" href="#">
                     <i class="bi bi-box-arrow-right"></i>
                     <span>Sign Out</span>
@@ -200,96 +164,72 @@
     </div>
     <!-- Navbar End -->
 
-    <!--Manage users Start  -->
-    <div class="container mt-5">
-      <h2>Manage users</h2>
-      <table class="table">
-          <thead>
-              <tr>
-                  <th class="text-center">#</th>
-                  <th>Name</th>
-                  <th>Job Position</th>
-                  <th>Since</th>
-                  <th class="text-right">Salary</th>
-                  <th class="text-right">Actions</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td class="text-center">1</td>
-                  <td>Andrew Mike</td>
-                  <td>Develop</td>
-                  <td>2013</td>
-                  <td class="text-right">&euro; 99,225</td>
-                  <td class="td-actions text-right">
-                      <button type="button" rel="tooltip" class="btn btn-info">
-                          <i class="bi bi-person"></i>
-                      </button>
-                      <button type="button" rel="tooltip" class="btn btn-success">
-                          <i class="bi bi-pencil"></i>
-                      </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger">
-                          <i class="bi bi-x"></i>
-                      </button>
-                  </td>
-              </tr>
-              <tr>
-                  <td class="text-center">2</td>
-                  <td>John Doe</td>
-                  <td>Design</td>
-                  <td>2012</td>
-                  <td class="text-right">&euro; 89,241</td>
-                  <td class="td-actions text-right">
-                      <button type="button" rel="tooltip" class="btn btn-info btn-round">
-                          <i class="bi bi-person"></i>
-                      </button>
-                      <button type="button" rel="tooltip" class="btn btn-success btn-round">
-                          <i class="bi bi-pencil"></i>
-                      </button>
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-round">
-                          <i class="bi bi-x"></i>
-                      </button>
-                  </td>
-              </tr>
-              <tr>
-                  <td class="text-center">3</td>
-                  <td>Alex Mike</td>
-                  <td>Design</td>
-                  <td>2010</td>
-                  <td class="text-right">&euro; 92,144</td>
-                  <td class="td-actions text-right">
-                      <button type="button" rel="tooltip" class="btn btn-info btn-simple">
-                          <i class="bi bi-person"></i>
-                      </button>
-                      <button type="button" rel="tooltip" class="btn btn-success btn-simple">
-                          <i class="bi bi-pencil"></i>
-                      </button>
-
-                      <button type="button" rel="tooltip" class="btn btn-danger btn-simple">
-                          <i class="bi bi-x"></i>
-                      </button>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
-
-      <!-- Pagination Section -->
-      <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
-              <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-              </li>
-          </ul>
-      </nav>
-  </div>
-  <!-- Manage users End -->
-
+    <!-- Command Start -->
+    <div class="container-fluid p-0 mb-5 mt-5 pt-4">
+      <div class="container mt-5">
+        <div class="container-xxl">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                  />
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                  />
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                  />
+                  <label for="subject">Subject</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a message here"
+                    id="message"
+                    style="height: 100px"
+                  ></textarea>
+                  <label for="message">Message</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary py-2 px-3 me-3">
+                  Send Message
+                  <div
+                    class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+                  >
+                    <i class="fa fa-arrow-right"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Command End -->
 
     <!-- Footer Start -->
     <div
@@ -384,7 +324,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-
-  
   </body>
 </html>
