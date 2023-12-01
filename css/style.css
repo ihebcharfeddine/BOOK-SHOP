@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-  --primary: #ff6f0f;
-  --secondary: #fff0e6;
-  --light: #f8f8f9;
-  --dark: #001d23;
+  --primary: #593a1e;
+  --secondary: #8c715a;
+  --light: #f2f2f2;
+  --dark: #260f01;
 }
 
 .back-to-top {
@@ -179,6 +179,12 @@
   padding-bottom: 6rem;
   background: var(--dark);
   background-size: cover;
+}
+
+.page-header-admin {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background: var(--dark);
 }
 
 .page-header .breadcrumb-item + .breadcrumb-item::before {
@@ -748,13 +754,17 @@
 #sidebarOpen {
   display: none;
 }
+
+.container-admin {
+  padding: 90px 10px 20px 275px;
+}
+
 @media screen and (max-width: 768px) {
   #sidebarOpen {
     font-size: 25px;
     display: block;
     margin-right: 10px;
     cursor: pointer;
-    color: var(--grey-color);
   }
   .sidebar.close {
     left: -100%;
@@ -764,5 +774,8 @@
   }
   .sidebar.close .bottom_content {
     left: -100%;
+  }
+  .container-admin {
+    padding: 90px 10px 20px 10px;
   }
 }
